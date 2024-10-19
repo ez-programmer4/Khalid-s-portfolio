@@ -46,9 +46,9 @@ export default function Projects() {
             mb={8}
             color={colorMode === "light" ? "gray.600" : "gray.400"}
           >
-            As a graphic designer, I've created a variety of projects that
-            showcase my skills in visual design and creativity. From logos to
-            brochures, I've got you covered.
+            I am excited to work on creative projects as a recent graduate,
+            whether it be planning, redesigning, rendering, or interior
+            designing. From logos to brochures, I have cover.
           </Text>
         </Grid>
 

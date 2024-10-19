@@ -157,10 +157,10 @@ export const skills = [
     image: microsoftoffice,
   },
   { name: "Revit", icon: Revit, percentage: 80, image: Revit },
-  { name: "AutoCAD", icon: faDraftingCompass, percentage: 75, image: AutoCAD },
-  { name: "SketchUp", icon: faDesktop, percentage: 78, image: SketchUp },
-  { name: "Lumion", icon: faVideo, percentage: 80, image: lumion },
-  { name: "CapCut", icon: faVideo, percentage: 80, image: capcut },
+  { name: "AutoCAD", icon: faDraftingCompass, percentage: 88, image: AutoCAD },
+  { name: "SketchUp", icon: faDesktop, percentage: 85, image: SketchUp },
+  { name: "Lumion", icon: faVideo, percentage: 87, image: lumion },
+  { name: "CapCut", icon: faVideo, percentage: 89, image: capcut },
 ];
 
 export const softSkills = [

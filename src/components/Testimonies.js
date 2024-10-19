@@ -57,16 +57,15 @@ export default function Testimonials() {
             mb={4}
             color={colorMode === "light" ? "gray.900" : "white"}
           >
-            What My Clients Say About My Graphic Design Services
+            What My Clients Say
           </Heading>
           <Text
             fontSize={{ base: "md", md: "lg" }}
             mb={8}
             color={colorMode === "light" ? "gray.600" : "gray.400"}
           >
-            As a beginner graphic designer, I've had the pleasure of working
-            with a variety of clients across different industries. Here's what
-            they have to say about my services.
+            I have enjoyed working with a wide range of clients in a variety of
+            organisations during my field of work;refer to what they stated.
           </Text>
         </Flex>
 
