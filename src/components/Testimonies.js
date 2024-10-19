@@ -8,6 +8,8 @@ import {
   Heading,
   Text,
   useColorMode,
+  useBreakpointValue,
+  SimpleGrid,
   Image,
 } from "@chakra-ui/react";
 import { ChatIcon } from "@heroicons/react/solid";
@@ -21,30 +23,15 @@ const sliderSettings = {
   dots: true,
   infinite: true,
   speed: 500,
-  slidesToShow: 1, // Default to 1 slide
+  slidesToShow: 1, // Show 1 slide at a time
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
-  responsive: [
-    {
-      breakpoint: 1024, // For laptops
-      settings: {
-        slidesToShow: 2, // Show 2 slides on laptops
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 768, // For tablets
-      settings: {
-        slidesToShow: 1, // Show 1 slide on tablets
-        slidesToScroll: 1,
-      },
-    },
-  ],
 };
 
 export default function Testimonials() {
   const { colorMode } = useColorMode();
+  const isMobileOrTablet = useBreakpointValue({ base: true, md: false }); // Determine if mobile or tablet
 
   return (
     <Box
@@ -54,7 +41,7 @@ export default function Testimonials() {
       py={{ base: 10, md: 20 }} // Responsive padding
       borderBottom="1px solid"
       borderBottomColor={colorMode === "light" ? "gray.200" : "gray.700"}
-      overflow="hidden" // Prevent overflow
+      overflow="hidden"
     >
       <Container
         maxW="container.xl"
@@ -66,14 +53,14 @@ export default function Testimonials() {
           <ChatIcon className="mx-auto inline-block w-6 h-6 mb-4" />
           <Heading
             as="h1"
-            fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }} // Responsive font sizes
+            fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
             mb={4}
             color={colorMode === "light" ? "gray.900" : "white"}
           >
             What My Clients Say About My Graphic Design Services
           </Heading>
           <Text
-            fontSize={{ base: "md", md: "lg" }} // Responsive font sizes
+            fontSize={{ base: "md", md: "lg" }}
             mb={8}
             color={colorMode === "light" ? "gray.600" : "gray.400"}
           >
@@ -83,9 +70,61 @@ export default function Testimonials() {
           </Text>
         </Flex>
 
-        <Box overflow="hidden">
-          {" "}
-          {/* Ensure the slider container has overflow hidden */}
+        {isMobileOrTablet ? (
+          // Render SimpleGrid for mobile and tablet
+          <SimpleGrid
+            columns={1} // 1 column for mobile and tablet
+            spacing={8} // Space between items
+          >
+            {testimonials.map((testimonial) => (
+              <Box
+                key={testimonial.name}
+                bgGradient={
+                  colorMode === "light"
+                    ? "linear(to-r, teal.500, teal.300)"
+                    : "linear(to-r, teal.800, teal.600)"
+                }
+                color="white"
+                p={6}
+                borderRadius="lg"
+                boxShadow="lg"
+                textAlign="left"
+                display="flex"
+                flexDirection="column"
+                justifyContent="space-between"
+                transition="transform 0.3s"
+                _hover={{ transform: "scale(1.05)", boxShadow: "2xl" }}
+              >
+                <Text fontSize={{ base: "md", md: "lg" }} mb={4} flexGrow={1}>
+                  "{testimonial.quote}"
+                </Text>
+                <Flex align="center" mt={4}>
+                  <Image
+                    src={testimonial.profilePhoto}
+                    alt={testimonial.name}
+                    borderRadius="full"
+                    boxSize={{ base: "60px", md: "80px" }}
+                  />
+                  <Box ml={4}>
+                    <Text
+                      fontSize={{ base: "md", md: "lg" }}
+                      color={colorMode === "light" ? "gray.900" : "white"}
+                    >
+                      {testimonial.name}
+                    </Text>
+                    <Text
+                      fontSize={{ base: "sm", md: "md" }}
+                      color={colorMode === "light" ? "gray.600" : "gray.500"}
+                    >
+                      {testimonial.company}
+                    </Text>
+                  </Box>
+                </Flex>
+              </Box>
+            ))}
+          </SimpleGrid>
+        ) : (
+          // Render Slider for laptops and larger screens
           <Slider {...sliderSettings}>
             {testimonials.map((testimonial) => (
               <Box
@@ -96,26 +135,17 @@ export default function Testimonials() {
                     : "linear(to-r, teal.800, teal.600)"
                 }
                 color="white"
-                p={6} // Responsive padding
+                p={6}
                 borderRadius="lg"
                 boxShadow="lg"
                 textAlign="left"
-                width="100%" // Set to 100% to fill the slide
-                mx="auto" // Center the cards
                 display="flex"
                 flexDirection="column"
                 justifyContent="space-between"
-                minWidth={{ base: "100%", md: "300px" }} // Ensure a minimum width for better responsiveness
-                flexShrink={0} // Prevent shrinking
-                transition="transform 0.3s" // Add transition for hover effect
-                _hover={{ transform: "scale(1.05)", boxShadow: "2xl" }} // Hover effect
-                my={4} // Add vertical margin for spacing between cards
+                transition="transform 0.3s"
+                _hover={{ transform: "scale(1.05)", boxShadow: "2xl" }}
               >
-                <Text
-                  fontSize={{ base: "md", md: "lg" }} // Responsive font sizes for quote
-                  mb={4}
-                  flexGrow={1} // Allow the quote text to grow
-                >
+                <Text fontSize={{ base: "md", md: "lg" }} mb={4} flexGrow={1}>
                   "{testimonial.quote}"
                 </Text>
                 <Flex align="center" mt={4}>
@@ -123,17 +153,17 @@ export default function Testimonials() {
                     src={testimonial.profilePhoto}
                     alt={testimonial.name}
                     borderRadius="full"
-                    boxSize={{ base: "60px", md: "80px" }} // Responsive image size
+                    boxSize={{ base: "60px", md: "80px" }}
                   />
                   <Box ml={4}>
                     <Text
-                      fontSize={{ base: "md", md: "lg" }} // Responsive font sizes
+                      fontSize={{ base: "md", md: "lg" }}
                       color={colorMode === "light" ? "gray.900" : "white"}
                     >
                       {testimonial.name}
                     </Text>
                     <Text
-                      fontSize={{ base: "sm", md: "md" }} // Responsive font sizes
+                      fontSize={{ base: "sm", md: "md" }}
                       color={colorMode === "light" ? "gray.600" : "gray.500"}
                     >
                       {testimonial.company}
@@ -143,7 +173,7 @@ export default function Testimonials() {
               </Box>
             ))}
           </Slider>
-        </Box>
+        )}
       </Container>
     </Box>
   );
