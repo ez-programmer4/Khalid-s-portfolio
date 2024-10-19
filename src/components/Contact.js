@@ -34,7 +34,7 @@ function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("https://backend-portfolio-hjtx.onrender.com/send-email", {
+    fetch("https://backend-khalid-portfolio-hjtx.onrender.com/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
