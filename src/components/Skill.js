@@ -37,7 +37,7 @@ export default function Skills() {
           mb={4}
           color={colorMode === "light" ? "gray.900" : "white"}
         >
-          software Skills
+          Software Skills
         </Heading>
         <Text
           fontSize={{ base: "sm", md: "lg" }} // Responsive font sizes

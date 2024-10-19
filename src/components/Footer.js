@@ -17,6 +17,8 @@ import {
   FaVk,
   FaTelegram,
 } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa"; // Import Instagram icon
+import { FaTiktok } from "react-icons/fa"; // Import TikTok icon
 
 const Footer = () => {
   const { colorMode } = useColorMode();
@@ -35,7 +37,7 @@ const Footer = () => {
       borderTop="5px solid #4CAF50"
     >
       <VStack align="flex-start" spacing={4} mb={{ base: 6, md: 0 }}>
-        <Image src="/logo.png" alt="My Graphics" w={40} h={40} />
+        <Image src="/HEADER.png" alt="My Graphics" w={40} h={40} />
       </VStack>
       <VStack align="flex-start" spacing={4}>
         <Text fontSize="lg" fontWeight="bold">
@@ -44,43 +46,36 @@ const Footer = () => {
         <Flex>
           {[
             {
-              icon: FaTwitter,
-              color: "#1DA1F2",
-              link: "https://twitter.com/@Ezedinebrahim1",
-            },
-            {
-              icon: FaGithub,
-              color: "#333",
-              link: "https://github.com/ez-programmer4",
-            },
-
-            {
-              icon: FaFacebook,
-              color: "#4267B2",
-              link: "https://facebook.com/mygraphics",
-            },
-            {
               icon: FaLinkedin,
               color: "#2867B2",
-              link: "https://linkedin.com/in/ezedin-ebrahim-11a01732b/",
-            },
-            {
-              icon: FaYoutube,
-              color: "#FF0000",
-              link: "https://youtube.com/@GeneralTruth1",
+              link: "https://www.linkedin.com/in/khalid-kaludi-85b567332/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", // Updated LinkedIn link
             },
 
             {
               icon: FaDiscord,
               color: "#7289DA",
-              link: "",
+              link: "", // Add link if available
             },
             {
               icon: FaTelegram,
               color: "#2867B2",
-              link: "https://t.me/ezebrahim",
+              link: "https://t.me/binmufo", // Updated Telegram link
             },
-            { icon: FaVk, color: "#45668E", link: "https://" },
+            {
+              icon: FaInstagram,
+              color: "#E4405F",
+              link: "https://instagram.com/khalbinbaba", // Instagram link
+            },
+            {
+              icon: FaTiktok,
+              color: "#000000",
+              link: "https://www.tiktok.com/@binmufo", // TikTok link
+            },
+            {
+              icon: FaVk,
+              color: "#45668E",
+              link: "", // Add link if available
+            },
           ].map(({ icon, color, link }, index) => (
             <Link
               href={link}
@@ -104,7 +99,7 @@ const Footer = () => {
         color={colorMode === "light" ? "gray.600" : "gray.400"} // Adjust footer text color based on mode
         textAlign={{ base: "center", md: "right" }}
       >
-        &copy; 2023 My Graphics. All rights reserved.
+        &copy; 2024 Khalid Muhammed. All rights reserved.
       </Text>
     </Flex>
   );

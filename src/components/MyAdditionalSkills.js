@@ -59,7 +59,11 @@ const MyAdditionalSkills = () => {
                 bg={colorMode === "light" ? "white" : "gray.800"}
                 color={colorMode === "light" ? "gray.800" : "gray.400"}
                 transition="0.3s"
-                _hover={{ boxShadow: "lg" }}
+                _hover={{
+                  boxShadow: "lg",
+                  transform: "scale(1.05)", // Scale effect on hover
+                  borderColor: "green.600", // Change border color on hover
+                }}
                 borderBottom="4px solid"
                 borderBottomColor="green.500" // Bottom border color
                 textAlign="center"

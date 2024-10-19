@@ -231,7 +231,7 @@ export const additionalSkills = [
 export const languages = [
   {
     language: "English",
-    proficiency: "Fluent",
+    proficiency: "Proffesional",
   },
   {
     language: "Arabic",

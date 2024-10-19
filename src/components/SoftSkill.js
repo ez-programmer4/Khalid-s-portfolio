@@ -72,7 +72,11 @@ export default function SoftSkill() {
               bg={colorMode === "light" ? "white" : "gray.800"} // Card background color
               color={colorMode === "light" ? "gray.800" : "gray.400"} // Text color
               transition="0.3s"
-              _hover={{ boxShadow: "lg" }} // Hover effect
+              _hover={{
+                boxShadow: "lg",
+                transform: "scale(1.05)", // Scale effect on hover
+                bg: colorMode === "light" ? "gray.200" : "gray.700", // Background change on hover
+              }} // Enhanced hover effect
               borderBottom="4px solid"
               borderBottomColor="green.500" // Bottom border color
               textAlign="center" // Center align the text and icon

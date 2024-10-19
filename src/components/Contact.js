@@ -34,7 +34,7 @@ function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("https://backend-khalid-portfolio-hjtx.onrender.com/send-email", {
+    fetch("https://backend-khalid-portfolio.onrender.com/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -102,7 +102,7 @@ function Contact() {
             >
               <Button
                 as={Link}
-                href="mailto:ezedinebrahim131@gmail.com"
+                href="mailto:Khalmohammed37@gmail.com"
                 variant="solid"
                 colorScheme="green"
                 size="lg"
@@ -116,7 +116,7 @@ function Contact() {
               </Button>
               <Button
                 as={Link}
-                href="https://www.linkedin.com/in/ezedin-ebrahim-11a01732b/"
+                href="https://www.linkedin.com/in/khalid-kaludi-85b567332/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 variant="outline"
                 colorScheme="gray"
                 size="lg"
