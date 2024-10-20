@@ -10,7 +10,7 @@ import profilePhoto1 from "./images/images (4).jpeg"; // Adjust the path as nece
 import profilePhoto2 from "./images/Sample mockup 2.png"; // Adjust the path as necessary
 import profilePhoto3 from "./images/IMG_20241015_152602_908.jpg"; // Adjust the path as necessary
 import profilePhoto4 from "./images/logokjumj.jpg";
-import profilePhoto5 from "./images/LOGO.png";
+import profilePhoto5 from "./images/logo-fasika.png";
 // import profilePhoto4 from "./images/profile4.jpg"; // Adjust the path as necessary
 // import profilePhoto5 from "./images/profile5.jpg";
 import Revit from "./images/images (2).png";
@@ -46,56 +46,56 @@ export const projects = [
     subtitle:
       "A contemporary residential design featuring a spacious terrace and modern aesthetics.",
     image: image2,
-    link: "https://drive.google.com/file/d/1tX4TDdsP3aDsimcmf9_U5p-PiEyxVW_5/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1-ysQWdsPaoPmqxC4tgfDZhXibpj_7tic/view?usp=drivesdk",
   },
   {
     title: "2B+G+12 Mixed Use Apartment",
     subtitle:
       "A multifaceted apartment design integrating residential and commercial spaces for vibrant urban living.",
     image: image3,
-    link: "https://drive.google.com/file/d/1cUQTu7ocXiUlqTveh2M18IQXp9ph7dLj/view?usp=sharing",
+    link: "https://drive.google.com/file/d/10BK7KyGe2lz6WWM4n25AjFCB11tKWsWP/view?usp=drivesdk",
   },
   {
     title: "Age-Friendly Landscape Design",
     subtitle:
       "A landscape design that caters to all ages while incorporating cultural elements for a rich community experience.",
     image: image1,
-    link: "https://drive.google.com/file/d/1WvrSgiECuOhmpChBBVwuWI6qXCfbp_-h/view?usp=sharing",
+    link: "https://drive.google.com/file/d/10HS_gb6CNvP1lwOuWa15csBWIoUj6rz6/view?usp=drivesdk",
   },
   {
     title: "General Hospital Design with HVAC System",
     subtitle:
       "An integrated design for a general hospital that prioritizes patient comfort and operational efficiency.",
     image: image4,
-    link: "https://drive.google.com/file/d/1lXWcFW7q0qUU2BGIaDHaA7nzPNF-BAeW/view?usp=sharing",
+    link: "https://drive.google.com/file/d/10APCNHlNUrvq2tDiOEzBO2NXtmU73IYm/view?usp=drivesdk",
   },
   {
     title: "Logo Design for I on I Construction",
     subtitle:
       "A tailored logo design that reflects the client's vision and preferences in the construction industry.",
     image: image12, // Adjust image as needed
-    link: "https://drive.google.com/file/d/1BUURmmGPJnOh4kRnMSp8xTQ6AjGapKNS/view?usp=sharing",
+    link: "https://drive.google.com/file/d/101ID3xB9kHquz9MW8VVQwSrlCH3W2dNg/view?usp=drivesdk",
   },
   {
     title: "Logo Design for Fast Travel Agency",
     subtitle:
       "A modern logo design that aligns with current trends while capturing the essence of fast travel.",
     image: image8, // Adjust image as needed
-    link: "https://drive.google.com/file/d/1ICIxY8lLwNR-lb3tjN13Yr4dHkyGtRQQ/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1-hSQpj6r-lKgpbhl8VfxZL8U8JiUFGo3/view?usp=drivesdk",
   },
   {
     title: "Artistic Binder Design for KJUMJ Graduate Students",
     subtitle:
       "A creative and simple binder design tailored for KJUMJ graduate students, combining functionality and aesthetics.",
     image: image11, // Adjust image as needed
-    link: "https://drive.google.com/file/d/19MAPWltiPmjSgGMprDJaERhNYuYrRemm/view?usp=sharing",
+    link: "https://drive.google.com/file/d/108-IKa5x9Z0hkVpdFkkN_gfr1b0J0-qJ/view?usp=drivesdk",
   },
   {
     title: "Memorable T-Shirt Design for KJUMJ Students",
     subtitle:
       "A unique t-shirt design that resonates with KJUMJ students, combining style and school spirit.",
     image: image14, // Adjust image as needed
-    link: "https://drive.google.com/file/d/1HLIhSkiOg0i9kqRCmcF8kBNGzCSYvupq/view?usp=sharing",
+    link: "https://drive.google.com/file/d/105O3_WywVQ42UiWApc2O_zbhO_-K4l55/view?usp=drivesdk",
   },
 ];
 

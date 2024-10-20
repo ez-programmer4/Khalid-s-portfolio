@@ -35,17 +35,14 @@ const MyAdditionalSkills = () => {
         px={{ base: 4, md: 10 }}
         textAlign="center"
       >
-        <Heading
-          as="h2"
-          fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
-          mb={4}
-          color="teal.500"
-        >
-          Additional Skills
-        </Heading>
-
         <Box mb={8}>
-          <Heading as="h3" size="md" mb={4} color="teal.400">
+          <Heading
+            as="h2"
+            fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+            size="md"
+            mb={4}
+            color="teal.400"
+          >
             Languages
           </Heading>
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
@@ -86,7 +83,14 @@ const MyAdditionalSkills = () => {
             ))}
           </SimpleGrid>
         </Box>
-
+        <Heading
+          as="h2"
+          fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+          mb={4}
+          color="teal.500"
+        >
+          Additional Skills
+        </Heading>
         <Box position="relative" overflow="hidden" height="150px">
           <motion.div
             style={{
