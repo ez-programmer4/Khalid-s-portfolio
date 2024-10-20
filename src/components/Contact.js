@@ -48,7 +48,6 @@ function Contact() {
             type: "success",
             message: "Message sent successfully!",
           });
-          // Clear form fields
           setName("");
           setEmail("");
           setMessage("");
@@ -74,29 +73,18 @@ function Contact() {
       id="contact"
       bg={colorMode === "light" ? "gray.100" : "gray.900"}
       color={colorMode === "light" ? "gray.800" : "gray.400"}
-      py={{ base: 10, md: 20 }} // Responsive padding
+      py={{ base: 10, md: 20 }}
     >
       <Container maxW="container.xl" mx="auto" px={{ base: 4, md: 10 }}>
         <Flex direction={{ base: "column", md: "row" }} align="flex-start">
           <Box flex="1" pr={{ md: 10 }} mb={{ base: 8, md: 0 }}>
-            <Heading
-              as="h2"
-              fontSize={{ base: "3xl", md: "5xl" }}
-              mb={4}
-              color={colorMode === "light" ? "gray.900" : "white"}
-              fontWeight="bold"
-            >
+            <Heading as="h2" fontSize={{ base: "3xl", md: "5xl" }} mb={4}>
               Get in Touch
             </Heading>
-            <Text
-              fontSize={{ base: "md", md: "lg" }}
-              mb={8}
-              color={colorMode === "light" ? "gray.600" : "gray.400"}
-            >
+            <Text fontSize={{ base: "md", md: "lg" }} mb={8}>
               As a graphic designer, I'm eager to collaborate on innovative
-              visual projects and help bring your ideas to life. If you have a
-              design concept or need assistance with branding, feel free to
-              reach out!
+              visual projects. If you have a design concept or need assistance,
+              feel free to reach out!
             </Text>
             <Flex
               direction={{ base: "column", md: "row" }}
@@ -110,24 +98,15 @@ function Contact() {
                 variant="solid"
                 colorScheme="green"
                 size="lg"
-                borderRadius="md"
-                boxShadow="md"
-                mb={{ base: 2, md: 0 }}
-                w={{ base: "full", md: "auto" }} // Full width on small screens
-                _hover={{ boxShadow: "lg" }}
               >
                 Email Me
               </Button>
               <Button
                 as={Link}
-                href="https://www.linkedin.com/in/khalid-kaludi-85b567332/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                href="https://www.linkedin.com/in/khalid-kaludi-85b567332/"
                 variant="outline"
                 colorScheme="gray"
                 size="lg"
-                borderRadius="md"
-                boxShadow="md"
-                w={{ base: "full", md: "auto" }} // Full width on small screens
-                _hover={{ bg: "gray.200", borderColor: "gray.400" }}
               >
                 Connect on LinkedIn
               </Button>
@@ -136,11 +115,7 @@ function Contact() {
           <Box flex="1" pl={{ md: 10 }}>
             <form name="contact" onSubmit={handleSubmit}>
               <FormControl isRequired mb={4}>
-                <FormLabel
-                  fontSize="lg"
-                  mb={2}
-                  color={colorMode === "light" ? "gray.900" : "white"}
-                >
+                <FormLabel fontSize="lg" mb={2}>
                   Name
                 </FormLabel>
                 <Input
@@ -151,21 +126,10 @@ function Contact() {
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your Name"
                   fontSize="lg"
-                  borderColor={colorMode === "light" ? "gray.400" : "gray.500"}
-                  _focus={{
-                    borderColor: "green.500",
-                    boxShadow: "0 0 0 1px green.500",
-                  }}
-                  borderRadius="md"
-                  p={4}
                 />
               </FormControl>
               <FormControl isRequired mb={4}>
-                <FormLabel
-                  fontSize="lg"
-                  mb={2}
-                  color={colorMode === "light" ? "gray.900" : "white"}
-                >
+                <FormLabel fontSize="lg" mb={2}>
                   Email
                 </FormLabel>
                 <Input
@@ -176,21 +140,10 @@ function Contact() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your Email"
                   fontSize="lg"
-                  borderColor={colorMode === "light" ? "gray.400" : "gray.500"}
-                  _focus={{
-                    borderColor: "green.500",
-                    boxShadow: "0 0 0 1px green.500",
-                  }}
-                  borderRadius="md"
-                  p={4}
                 />
               </FormControl>
               <FormControl isRequired mb={4}>
-                <FormLabel
-                  fontSize="lg"
-                  mb={2}
-                  color={colorMode === "light" ? "gray.900" : "white"}
-                >
+                <FormLabel fontSize="lg" mb={2}>
                   Message
                 </FormLabel>
                 <Textarea
@@ -200,13 +153,6 @@ function Contact() {
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Your Message"
                   fontSize="lg"
-                  borderColor={colorMode === "light" ? "gray.400" : "gray.500"}
-                  _focus={{
-                    borderColor: "green.500",
-                    boxShadow: "0 0 0 1px green.500",
-                  }}
-                  borderRadius="md"
-                  p={4}
                   rows={5}
                 />
               </FormControl>
@@ -216,15 +162,12 @@ function Contact() {
                 colorScheme="green"
                 size="lg"
                 w="full"
-                borderRadius="md"
-                boxShadow="md"
-                _hover={{ boxShadow: "lg" }}
               >
                 Submit
               </Button>
             </form>
             {alertStatus.isOpen && (
-              <Alert status={alertStatus.type} mt={4} borderRadius="md">
+              <Alert status={alertStatus.type} mt={4}>
                 <AlertIcon />
                 <AlertTitle>
                   {alertStatus.type === "success" ? "Success!" : "Error!"}
