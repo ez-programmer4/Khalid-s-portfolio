@@ -48,6 +48,10 @@ function Contact() {
             type: "success",
             message: "Message sent successfully!",
           });
+          // Clear form fields
+          setName("");
+          setEmail("");
+          setMessage("");
         } else {
           setAlertStatus({
             isOpen: true,
