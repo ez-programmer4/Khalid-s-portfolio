@@ -46,9 +46,8 @@ export default function Projects() {
             mb={8}
             color={colorMode === "light" ? "gray.600" : "gray.400"}
           >
-            I am excited to work on creative projects as a recent graduate,
-            whether it be planning, redesigning, rendering, or interior
-            designing. From logos to brochures, I have cover.
+            During the duration of the academic projects, internship, and
+            volunteer phases, the following tasks got done.
           </Text>
         </Grid>
 

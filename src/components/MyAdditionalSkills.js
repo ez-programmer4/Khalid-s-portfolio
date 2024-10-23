@@ -102,7 +102,7 @@ const MyAdditionalSkills = () => {
             initial={{ x: "100%" }} // Start from the right edge of the viewport
             animate={{ x: "-200%" }} // Move to the left until it goes off-screen
             transition={{
-              duration: 10, // Slowed down the motion
+              duration: 15, // Increased duration for slower motion
               ease: "linear",
               repeat: Infinity,
             }}

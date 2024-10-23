@@ -141,26 +141,26 @@ export const skills = [
   {
     name: "Adobe photoshop",
     icon: faPaintBrush,
-    percentage: 90,
+    percentage: 85,
     image: Adobe,
   },
   {
     name: "Adobe illustrator",
     icon: faPaintBrush,
-    percentage: 90,
+    percentage: 85,
     image: Adobe2,
   },
   {
     name: "Microsoft Office",
     icon: faFileAlt,
-    percentage: 85,
+    percentage: 90,
     image: microsoftoffice,
   },
-  { name: "Revit", icon: Revit, percentage: 80, image: Revit },
-  { name: "AutoCAD", icon: faDraftingCompass, percentage: 88, image: AutoCAD },
+  { name: "Revit", icon: Revit, percentage: 93, image: Revit },
+  { name: "AutoCAD", icon: faDraftingCompass, percentage: 93, image: AutoCAD },
   { name: "SketchUp", icon: faDesktop, percentage: 85, image: SketchUp },
-  { name: "Lumion", icon: faVideo, percentage: 87, image: lumion },
-  { name: "CapCut", icon: faVideo, percentage: 89, image: capcut },
+  { name: "Lumion", icon: faVideo, percentage: 93, image: lumion },
+  { name: "CapCut", icon: faVideo, percentage: 80, image: capcut },
 ];
 
 export const softSkills = [
