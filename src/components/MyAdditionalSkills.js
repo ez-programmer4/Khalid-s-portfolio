@@ -12,7 +12,7 @@ import {
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLanguage } from "@fortawesome/free-solid-svg-icons";
-import carImage from "../images/car.png";
+import carImage from "../images/v8.png";
 import { languages } from "../data"; // Ensure additionalSkills is removed
 
 const MyAdditionalSkills = () => {

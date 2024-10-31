@@ -21,6 +21,11 @@ import Adobe from "./images/download (4).png";
 import Adobe2 from "./images/download (3).png";
 import microsoftoffice from "./images/download (1).png";
 import capcut from "./images/images (8).jpeg";
+import certeficate1 from "./images/c1-new.jpg";
+import certeficate2 from "./images/c2-new.jpg";
+import certeficate3 from "./images/c3-new.jpg";
+import certeficate4 from "./images/c4-new.jpg";
+import certeficate5 from "./images/c5-new.jpg";
 import {
   faDesktop,
   faFileAlt,
@@ -161,6 +166,36 @@ export const skills = [
   { name: "SketchUp", icon: faDesktop, percentage: 85, image: SketchUp },
   { name: "Lumion", icon: faVideo, percentage: 93, image: lumion },
   { name: "CapCut", icon: faVideo, percentage: 80, image: capcut },
+];
+
+// Define the certificates array
+export const certificates = [
+  {
+    title:
+      "Certificate of Appreciation from Department Architecture and Urban Planning Head JIT.",
+    image: certeficate1,
+    link: "https://drive.google.com/file/d/1J7BszlyX9TCfnk7jHcnPJbs5NqiAIe1T/view?usp=sharing", // Replace with actual link
+  },
+  {
+    title: "Certificate of Completion from Dereja",
+    image: certeficate2,
+    link: "https://drive.google.com/file/d/1pGFk-8xK-tUtGRxacbNUu7Ls5zEl01HT/view?usp=drive_link", // Replace with actual link
+  },
+  {
+    title: "Certificate of Appreciation from KJUMJ.",
+    image: certeficate3,
+    link: "https://drive.google.com/file/d/1oo21BKetMfjGJO8apGBloW1_qwRqcWfE/view?usp=sharing", // Replace with actual link
+  },
+  {
+    title: "My Tempo",
+    image: certeficate4,
+    link: "https://drive.google.com/file/d/14U6f-Gx_Vngne5DToudC4hdMlAUz-h5J/view?usp=sharing", // Replace with actual link
+  },
+  {
+    title: "Certificate of Recognition frok JIT Student Union",
+    image: certeficate5,
+    link: "https://drive.google.com/file/d/1ItVniTyDQLe0-5Gkm6SPLQ7zcU2K7eLm/view?usp=sharing", // Replace with actual link
+  },
 ];
 
 export const softSkills = [

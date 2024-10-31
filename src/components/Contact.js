@@ -19,6 +19,11 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
+import { motion } from "framer-motion"; // Import motion
+
+// Create motion components
+const MotionButton = motion(Button);
+const MotionIcon = motion("span"); // Create a motion span for the icon
 
 function Contact() {
   const { colorMode } = useColorMode();
@@ -126,6 +131,32 @@ function Contact() {
               >
                 Connect on LinkedIn
               </Button>
+              <MotionButton
+                as={Link}
+                href="tel:+251922293529" // Replace with your phone number
+                variant="solid"
+                colorScheme="green"
+                size="lg"
+                borderRadius="md"
+                boxShadow="md"
+                mb={{ base: 2, md: 0 }}
+                w={{ base: "full", md: "auto" }} // Full width on small screens
+                _hover={{ boxShadow: "lg" }}
+                whileHover={{ scale: 1.1 }} // Scale effect on button hover
+                whileTap={{ scale: 0.9 }} // Slight shrink effect on button tap
+                leftIcon={
+                  <MotionIcon
+                    role="img"
+                    aria-label="phone"
+                    whileHover={{ scale: 1.2 }} // Scale effect for the icon on hover
+                    whileTap={{ scale: 0.8 }} // Shrink effect for the icon on tap
+                  >
+                    📞
+                  </MotionIcon>
+                }
+              >
+                Call Me
+              </MotionButton>
             </Flex>
           </Box>
           <Box flex="1" pl={{ md: 10 }}>

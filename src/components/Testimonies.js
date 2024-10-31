@@ -8,7 +8,6 @@ import {
   Heading,
   Text,
   useColorMode,
-  useBreakpointValue,
   SimpleGrid,
   Image,
 } from "@chakra-ui/react";
@@ -31,7 +30,22 @@ const sliderSettings = {
 
 export default function Testimonials() {
   const { colorMode } = useColorMode();
-  const isMobileOrTablet = useBreakpointValue({ base: true, md: false }); // Determine if mobile or tablet
+
+  // Function to check window width
+  const [isSliderVisible, setIsSliderVisible] = React.useState(
+    window.innerWidth > 1300
+  );
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsSliderVisible(window.innerWidth > 1300);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <Box
@@ -65,12 +79,62 @@ export default function Testimonials() {
             color={colorMode === "light" ? "gray.600" : "gray.400"}
           >
             I have enjoyed working with a wide range of clients in a variety of
-            organisations during my field of work;refer to what they stated.
+            organisations during my field of work; refer to what they stated.
           </Text>
         </Flex>
 
-        {isMobileOrTablet ? (
-          // Render SimpleGrid for mobile and tablet
+        {isSliderVisible ? (
+          // Render Slider for screens wider than 1300px
+          <Slider {...sliderSettings}>
+            {testimonials.map((testimonial) => (
+              <Box
+                key={testimonial.name}
+                bgGradient={
+                  colorMode === "light"
+                    ? "linear(to-r, teal.500, teal.300)"
+                    : "linear(to-r, teal.800, teal.600)"
+                }
+                color="white"
+                p={6}
+                borderRadius="lg"
+                boxShadow="lg"
+                textAlign="left"
+                display="flex"
+                flexDirection="column"
+                justifyContent="space-between"
+                transition="transform 0.3s"
+                _hover={{ transform: "scale(1.05)", boxShadow: "2xl" }}
+              >
+                <Text fontSize={{ base: "md", md: "lg" }} mb={4} flexGrow={1}>
+                  "{testimonial.quote}"
+                </Text>
+                <Flex align="center" mt={4}>
+                  <Image
+                    src={testimonial.profilePhoto}
+                    alt={testimonial.name}
+                    borderRadius="full"
+                    boxSize={{ base: "60px", md: "80px" }}
+                  />
+                  <Box ml={4}>
+                    <Text
+                      fontSize={{ base: "md", md: "lg" }}
+                      color={colorMode === "light" ? "gray.900" : "white"}
+                    >
+                      {testimonial.name}
+                    </Text>
+                    <Text
+                      fontSize={{ base: "sm", md: "md" }}
+                      color={colorMode === "light" ? "gray.600" : "gray.500"}
+                    >
+                      {testimonial.company}
+                    </Text>
+                  </Box>
+                </Flex>
+              </Box>
+            ))}
+          </Slider>
+        ) : (
+          // Render SimpleGrid for screens narrower than 1300px
           <SimpleGrid
             columns={1} // 1 column for mobile and tablet
             spacing={8} // Space between items
@@ -122,56 +186,6 @@ export default function Testimonials() {
               </Box>
             ))}
           </SimpleGrid>
-        ) : (
-          // Render Slider for laptops and larger screens
-          <Slider {...sliderSettings}>
-            {testimonials.map((testimonial) => (
-              <Box
-                key={testimonial.name}
-                bgGradient={
-                  colorMode === "light"
-                    ? "linear(to-r, teal.500, teal.300)"
-                    : "linear(to-r, teal.800, teal.600)"
-                }
-                color="white"
-                p={6}
-                borderRadius="lg"
-                boxShadow="lg"
-                textAlign="left"
-                display="flex"
-                flexDirection="column"
-                justifyContent="space-between"
-                transition="transform 0.3s"
-                _hover={{ transform: "scale(1.05)", boxShadow: "2xl" }}
-              >
-                <Text fontSize={{ base: "md", md: "lg" }} mb={4} flexGrow={1}>
-                  "{testimonial.quote}"
-                </Text>
-                <Flex align="center" mt={4}>
-                  <Image
-                    src={testimonial.profilePhoto}
-                    alt={testimonial.name}
-                    borderRadius="full"
-                    boxSize={{ base: "60px", md: "80px" }}
-                  />
-                  <Box ml={4}>
-                    <Text
-                      fontSize={{ base: "md", md: "lg" }}
-                      color={colorMode === "light" ? "gray.900" : "white"}
-                    >
-                      {testimonial.name}
-                    </Text>
-                    <Text
-                      fontSize={{ base: "sm", md: "md" }}
-                      color={colorMode === "light" ? "gray.600" : "gray.500"}
-                    >
-                      {testimonial.company}
-                    </Text>
-                  </Box>
-                </Flex>
-              </Box>
-            ))}
-          </Slider>
         )}
       </Container>
     </Box>

@@ -16,6 +16,7 @@ import Skill from "./components/Skill";
 import Testimonies from "./components/Testimonies";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Certificates from "./components/Certificates";
 import SoftSkill from "./components/SoftSkill";
 import MyAdditionalSkills from "./components/MyAdditionalSkills";
 
@@ -76,6 +77,7 @@ function App() {
           <Skill />
           <SoftSkill />
           <MyAdditionalSkills />
+          <Certificates />
           <Testimonies />
           <Contact />
         </VStack>
