@@ -171,6 +171,11 @@ export const skills = [
 // Define the certificates array
 export const certificates = [
   {
+    title: "My Tempo",
+    image: certeficate4,
+    link: "https://drive.google.com/file/d/14U6f-Gx_Vngne5DToudC4hdMlAUz-h5J/view?usp=sharing", // Replace with actual link
+  },
+  {
     title:
       "Certificate of Appreciation from Department Architecture and Urban Planning Head JIT.",
     image: certeficate1,
@@ -186,13 +191,9 @@ export const certificates = [
     image: certeficate3,
     link: "https://drive.google.com/file/d/1oo21BKetMfjGJO8apGBloW1_qwRqcWfE/view?usp=sharing", // Replace with actual link
   },
+
   {
-    title: "My Tempo",
-    image: certeficate4,
-    link: "https://drive.google.com/file/d/14U6f-Gx_Vngne5DToudC4hdMlAUz-h5J/view?usp=sharing", // Replace with actual link
-  },
-  {
-    title: "Certificate of Recognition frok JIT Student Union",
+    title: "Certificate of Recognition from JIT Student Union",
     image: certeficate5,
     link: "https://drive.google.com/file/d/1ItVniTyDQLe0-5Gkm6SPLQ7zcU2K7eLm/view?usp=sharing", // Replace with actual link
   },
